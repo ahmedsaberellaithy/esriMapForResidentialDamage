@@ -1,0 +1,28 @@
+#map {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color:#F7F9FC ;
+}
+
+.pageTitle {
+    padding-top:0px !important;
+    margin-top: 0px !important;
+}
+
+.pageHeaderCustom {
+    height: 100%;
+    font-family: 'Roboto';
+    padding-top: 1em !important;
+    margin-top: 0em !important;
+    margin-bottom: 0em !important;
+    padding-bottom: 1em !important;
+    padding-left: 0em !important;
+    padding-right: 0em !important;
+    color: #c4c4c4;
+    background-color:#24292E;
+}

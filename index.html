@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Damages to Residential Buildings</title>
+    <!-- Metadata -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- ArcGIS 3.35 -->
+    <script src="https://js.arcgis.com/3.35/"></script>
+    <link rel="stylesheet" href="https://js.arcgis.com/3.35/esri/css/esri.css">
+
+    <!-- Kindo Grid -->
+    <!-- <link href="https://kendo.cdn.telerik.com/2021.1.119/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="https://kendo.cdn.telerik.com/2021.1.119/styles/kendo.default.min.css" rel="stylesheet" />
+    <script src="https://kendo.cdn.telerik.com/2021.1.119/js/kendo.all.min.js"></script> -->
+
+    <!-- Custom -->
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/mapInit.js"></script>
+  </head>
+
+  <body>
+    <div class="row page-header pageHeaderCustom">
+      <div class="col-sm-8">
+        <div class="text-center">
+          <h4 class="pageTitle">Map of Damages to Residential Buildings</h4>
+          <p>The location of damaged residential structures and a description of the extent to which the structure and its contents were damaged.</p> 
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <button type="button" class="btn btn-sm btn-success" id="bufferButton" onclick="makeAbuffer()">Do 2KM buffer around last active Point</button>
+        <p><strong>Last Active Mouse Coordinates:</strong>&nbsp;&nbsp;<span id="coordinates"></span></p>
+        <span>Search by Incident ObjectId</span>
+        <div id="search"></div>
+      </div>
+      <hr class="my-4">
+    </div>
+    <div class="row">
+      <div id="mapContainer"></div>
+    </div>  
+    <div class="row">
+        
+      <div class="col-sm-2">
+        <div class="row">
+          
+        </div>
+        <div class="row">
+          <div id="infoPanel">
+            
+          </div>
+        </div>
+        
+      </div>
+      <div class="col-sm-10">
+        
+        <div class="row">
+          <div id="grid"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <!-- <script src="./js/kindoGridInit.js"></script> -->
+  </footer>
+</html>
